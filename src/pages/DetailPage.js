@@ -1,6 +1,6 @@
 import About from "../components/detail/About";
 import Skill from "../components/detail/Skill";
-function DetailPage() {
+function DetailPage({ }) {
 
     return (
         <div className="container">

@@ -1,28 +1,51 @@
+
 import "../css/Navbar.css"
-import { useLocation } from "react-router-dom";
-function Navber() {
-    const location = useLocation();
+import { useState, useRef, useEffect } from "react";
+
+const DETAIL_NAV = [
+    { idx: 0, name: 'About' },
+    { idx: 1, name: 'SkillSet' },
+    { idx: 2, name: 'Project' }
+]
+
+const Navber = ({ scrollRef }) => {
+    const [navIndex, setNavIndex] = useState(null);
+    const navRef = useRef([]);
+
+    useEffect(() => {
+        scrollRef.current[navIndex]?.scrollIntoView({ behavior: 'smooth' });
+        setNavIndex(null)
+    }, [scrollRef, navIndex])
+
+
+    useEffect(() => {
+        const changeNavBtnStyle = () => {
+            scrollRef.current.forEach((ref, idx) => {
+                if (ref.offsetTop - 180 < window.scrollY) {
+                    navRef.current.forEach(ref => {
+                        ref.className = ref.className.replace(' navActive', '');
+                    });
+
+                    navRef.current[idx].className += ' navActive'
+                }
+
+            });
+        };
+        window.addEventListener('scroll', changeNavBtnStyle);
+        return () => {
+            window.removeEventListener('scroll', changeNavBtnStyle);
+        }
+    }, [scrollRef])
     return (
         <nav id="nav">
-            <ul>
-                <li>
-                    <a href='#about' className={(location.hash) == "#about" ? "navActive" : "navUnActive"}>
-                        About
-                    </a>
-                </li>
-                <li>
-                    <a href='#skill' className={(location.hash) == "#skill" ? "navActive" : "navUnActive"}>
-                        SkillSet
-                    </a>
-                </li>
-                <li>
-                    <a href='#project' className={(location.hash) == "#project" ? "navActive" : "navUnActive"}>
-                        Project
-                    </a>
-                </li>
-            </ul>
+            {DETAIL_NAV.map(({ idx, name }) => (
+                <a className="navUnActive" key={idx}
+                    ref={ref => (navRef.current[idx] = ref)}
+                    onClick={() => { setNavIndex(idx) }}>{name}</a>
+            ))}
         </nav>
-    )
-}
+    );
+};
+
 
 export default Navber;

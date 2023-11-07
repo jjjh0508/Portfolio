@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom"
 import Profile from "./components/Profile"
 import Navber from "./components/Navbar"
 import "./css/Layout.css"
-function Layout() {
+function Layout({ scrollRef }) {
 
     return (
         <>
@@ -10,7 +10,7 @@ function Layout() {
                 <div id="header">
                     <header>
                         <Profile />
-                        <Navber />
+                        <Navber scrollRef={scrollRef} />
                     </header>
                 </div>
                 <Outlet />

@@ -1,9 +1,10 @@
 import "../css/About.css"
-function About() {
+import { forwardRef } from "react";
+const About = forwardRef((props, ref) => {
 
     return (
         <>
-            <section id="about" className="about about-section">
+            <section ref={reviewRef => (ref.current[0] = reviewRef)} id="about" className="about about-section">
                 <div className="about-board">
                     <div class="about-intro">
                         <h2>About Me</h2>
@@ -24,6 +25,6 @@ function About() {
             </section>
         </>
     )
-}
+});
 
 export default About;

@@ -1,9 +1,10 @@
-import "../css/Skill.css"
-function Skill() {
+import "../css/Skill.css";
+import { forwardRef } from "react";
+const Skill = forwardRef((props, ref) => {
 
     return (
         <>
-            <section id="skill" className="skill page project-section">
+            <section ref={reviewRef => (ref.current[1] = reviewRef)} id="skill" className="skill page project-section">
                 <div className="skill skill-section">
                     <div>
                         <div className="skillTitle">SkillSet</div>
@@ -55,6 +56,6 @@ function Skill() {
         </>
 
     )
-}
+});
 
 export default Skill;
