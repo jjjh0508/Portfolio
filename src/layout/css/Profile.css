@@ -1,0 +1,36 @@
+.image.profile {
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.image {
+    border: 0;
+    position: relative;
+}
+
+#header>header {
+    padding: 3vh
+}
+
+#header>header .profile {
+    display: block;
+    margin: 0 auto 2vw auto;
+    width: 10vw;
+}
+
+.image.profile .profileImage {
+    border-radius: 100%;
+    display: block;
+    width: 100%;
+}
+
+.icon {
+    width: 20vh;
+}
+
+#header h1 {
+    color: #2a412a;
+    font-size: 1.7vw;
+    font-weight: 700;
+    margin-top: 1.3vw;
+}

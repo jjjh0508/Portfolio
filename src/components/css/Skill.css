@@ -1,0 +1,122 @@
+.skill-section {
+    width: 100%;
+    align-items: end;
+    justify-content: space-between;
+    transition: 0.3s;
+    color: #475347;
+    vertical-align: middle;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.project-section {
+    padding-left: 30vw;
+    padding-top: 10vw;
+    width: calc(100% - 36vw);
+    height: calc(100vh - 10vw);
+    z-index: 0;
+    overflow: hidden;
+}
+
+.skillTitle {
+    font-size: 2.0vw;
+    color: #4acaa8;
+
+
+}
+
+.skill-section .skill-list {
+    list-style: none;
+    padding: 1.5vw;
+    width: 100%;
+    z-index: 1;
+    transition: 0.3;
+}
+
+.skill-section .skill-list li {
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+    height: 18vh;
+    border-top: 1px solid #A1A594;
+    transition: 0.3s;
+}
+
+.skill-section .skill-list li:last-child {
+    border-bottom: 1px solid #A1A594;
+}
+
+.skill-section .skill-list li:hover {
+    background-color: #A1A594;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.skill-section .skill-list .hover-text {
+    color: #fff;
+    font-size: 1.5vw;
+    margin-right: 2vw;
+    opacity: 0;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    transition: 0.6s;
+    vertical-align: middle;
+
+
+
+}
+
+.skill-section .skill-list li:hover .hover-text {
+    opacity: 1;
+
+}
+
+.skill-section .skill-list li h4 {
+    margin-bottom: 0.8vw;
+    font-size: 1.5vw;
+    padding-left: 1.5vw;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+
+}
+
+
+.skill-section .skill-list li h5 {
+    font-size: 1vw;
+    margin-top: 0.8vw;
+    padding-left: 1.45vw;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+
+}
+
+.skill-section .skill-list li span {
+    width: calc(55%);
+
+}
+
+.skill-section .skill-list li span p {
+    width: 100%;
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 0.8vw;
+
+}
+
+.skill-flex {
+    display: flex;
+    justify-content: space-between;
+}

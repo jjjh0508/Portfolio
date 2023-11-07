@@ -1,0 +1,23 @@
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav a {
+    text-decoration: none;
+}
+
+
+.navActive {
+    font-size: 1.625rem;
+    font-style: italic;
+    color: white;
+    font-size: 4vh;
+}
+
+.navUnActive {
+    color: white;
+    font-size: 3vh;
+
+}
