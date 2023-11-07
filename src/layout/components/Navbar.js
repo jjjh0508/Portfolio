@@ -9,7 +9,7 @@ const DETAIL_NAV = [
 ]
 
 const Navber = ({ scrollRef }) => {
-    const [navIndex, setNavIndex] = useState(null);
+    const [navIndex, setNavIndex] = useState(0);
     const navRef = useRef([]);
 
     useEffect(() => {
