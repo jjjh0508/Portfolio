@@ -4,7 +4,7 @@ const Skill = forwardRef((props, ref) => {
 
     return (
         <>
-            <section ref={reviewRef => (ref.current[1] = reviewRef)} id="skill" className="skill page project-section">
+            <section ref={skillRef => (ref.current[1] = skillRef)} id="skill" className="skill page project-section">
                 <div className="skill skill-section">
                     <div>
                         <div className="skillTitle">SkillSet</div>
