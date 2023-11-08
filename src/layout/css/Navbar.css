@@ -15,10 +15,57 @@ nav ul {
     font-size: 1.625rem;
     font-style: italic;
     font-size: 4vh;
+    font-weight: bold;
 }
 
 .navUnActive {
     color: white;
     font-size: 3vh;
+
+}
+
+
+.nav-bottom {
+    width: 5%;
+    height: 13vh;
+    background-color: #4acaa8;
+    border-radius: 3.125rem;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    bottom: 4%;
+    right: 2%;
+}
+
+
+nav img {
+    width: 4.3vw;
+}
+
+nav img:hover {
+    transition: 0.5s;
+    filter: invert(50%) sepia(3%) saturate(1651%) hue-rotate(40deg) brightness(99%) contrast(50%);
+}
+
+
+.arrowbtn a {
+    fill: var(--bg-color1);
+    align-items: center;
+    background-color: #4acaa8;
+    border-radius: 70%;
+    bottom: 9vw;
+    color: #f3f2ed;
+    display: block;
+    display: flex;
+    font-size: 2.5vw;
+    height: 5vw;
+    justify-content: center;
+    position: fixed;
+    right: 2%;
+    text-align: center;
+    transition: .3s;
+    width: 5vw;
 
 }

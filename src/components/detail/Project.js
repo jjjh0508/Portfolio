@@ -11,6 +11,10 @@ import algore from "../images/algore.png"
 import "../css/Project.css"
 const Project = forwardRef((props, ref) => {
 
+    const onClickToegu = () => {
+        props.setProjectSet(1)
+    }
+
     return (
 
         <section ref={projectRef => { ref.current[2] = projectRef }} id="project" className="page project-section">
@@ -35,7 +39,7 @@ const Project = forwardRef((props, ref) => {
                                 <div>JPA</div>
                                 <div>RestAPI</div>
                             </div>
-                            <div>
+                            <div className="project-view" onClick={onClickToegu}>
                                 View More
                             </div>
                         </div>
@@ -52,7 +56,7 @@ const Project = forwardRef((props, ref) => {
                                 <div>공공데이터</div>
                                 <div>Thymeleaf</div>
                             </div>
-                            <div>
+                            <div className="project-view">
                                 View More
                             </div>
                         </div>
