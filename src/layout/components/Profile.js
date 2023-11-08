@@ -3,7 +3,9 @@ import "../css/Profile.css"
 import "../css/Layout.css"
 import github from "../images/github.png"
 import Navber from "./Navbar"
+import { useLocation } from "react-router-dom";
 function Profile({ scrollRef, isToggle }) {
+    const sampleLocation = useLocation().pathname;
     return (
         <>
             <aside className={isToggle ? "asideOn" : "aside"} id="aside">
@@ -17,7 +19,8 @@ function Profile({ scrollRef, isToggle }) {
                         </a>
 
                     </div>
-                    <Navber scrollRef={scrollRef} />
+                    {sampleLocation === "/" && <Navber scrollRef={scrollRef} />}
+
                 </object>
             </aside>
         </>

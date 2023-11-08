@@ -1,7 +1,7 @@
 
 import "../css/Navbar.css"
 import { useState, useRef, useEffect } from "react";
-
+import { useLocation } from "react-router-dom";
 const DETAIL_NAV = [
     { idx: 0, name: 'About' },
     { idx: 1, name: 'SkillSet' },
@@ -11,36 +11,39 @@ const DETAIL_NAV = [
 const Navber = ({ scrollRef }) => {
     const [navIndex, setNavIndex] = useState(0);
     const navRef = useRef([]);
+    const sampleLocation = useLocation().pathname;
 
     useEffect(() => {
+        if (sampleLocation === "/") {
+            scrollRef.current[navIndex]?.scrollIntoView({ behavior: 'smooth' });
+            setNavIndex(null)
+        }
 
-        scrollRef.current[navIndex]?.scrollIntoView({ behavior: 'smooth' });
-        setNavIndex(null)
-
-    }, [scrollRef, navIndex])
+    }, [scrollRef, navIndex, sampleLocation])
 
     useEffect(() => {
+        if (sampleLocation === "/") {
+            const changeNavBtnStyle = () => {
+                scrollRef.current.forEach((ref, idx) => {
+                    if (ref.offsetTop - 180 < window.scrollY) {
+                        navRef.current.forEach(ref => {
+                            ref.className = ref.className.replace(' navActive', '');
+                        });
 
-        const changeNavBtnStyle = () => {
+                        navRef.current[idx].className += ' navActive'
+                    }
 
-            scrollRef.current.forEach((ref, idx) => {
-                if (ref.offsetTop - 180 < window.scrollY) {
-                    navRef.current.forEach(ref => {
-                        ref.className = ref.className.replace(' navActive', '');
-                    });
+                });
+            }
 
-                    navRef.current[idx].className += ' navActive'
-                }
-
-            });
+            window.addEventListener('scroll', changeNavBtnStyle);
+            return () => {
+                window.removeEventListener('scroll', changeNavBtnStyle);
+            }
         }
 
-        window.addEventListener('scroll', changeNavBtnStyle);
-        return () => {
-            window.removeEventListener('scroll', changeNavBtnStyle);
-        }
 
-    }, [scrollRef])
+    }, [scrollRef, sampleLocation])
     return (
         <nav id="nav">
             {DETAIL_NAV.map(({ idx, name }) => (

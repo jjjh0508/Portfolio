@@ -1,9 +1,11 @@
 import { forwardRef } from "react";
+import { NavLink } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
+
 
 
 import toegeungilImg from "../images/toegeungil.png"
@@ -11,9 +13,6 @@ import algore from "../images/algore.png"
 import "../css/Project.css"
 const Project = forwardRef((props, ref) => {
 
-    const onClickToegu = () => {
-        props.setProjectSet(1)
-    }
 
     return (
 
@@ -39,9 +38,11 @@ const Project = forwardRef((props, ref) => {
                                 <div>JPA</div>
                                 <div>RestAPI</div>
                             </div>
-                            <div className="project-view" onClick={onClickToegu}>
-                                View More
-                            </div>
+                            <NavLink to='/toegeungil'>
+                                <div className="project-view">
+                                    View More
+                                </div>
+                            </NavLink>
                         </div>
                         <div className="project-img">
                             <img src={toegeungilImg}></img>
@@ -56,9 +57,11 @@ const Project = forwardRef((props, ref) => {
                                 <div>공공데이터</div>
                                 <div>Thymeleaf</div>
                             </div>
-                            <div className="project-view">
-                                View More
-                            </div>
+                            <NavLink to='/toegeungil'>
+                                <div className="project-view">
+                                    View More
+                                </div>
+                            </NavLink>
                         </div>
                         <div className="project-img">
                             <img src={algore}></img>
