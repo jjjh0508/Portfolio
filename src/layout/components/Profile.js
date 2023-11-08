@@ -1,19 +1,25 @@
 import profile from "../images/jihwan.jpg"
 import "../css/Profile.css"
+import "../css/Layout.css"
 import github from "../images/github.png"
-function Profile() {
-
+import Navber from "./Navbar"
+function Profile({ scrollRef, isToggle }) {
     return (
         <>
-            <span class="image profile">
-                <img className="profileImage" src={profile} />
-            </span>
-            <h1>
-                전지환
-            </h1>
-            <a href="https://github.com/jjjh0508" target="_blank">
-                <img className="icon" src={github} />
-            </a>
+            <aside className={isToggle ? "asideOn" : "aside"} id="aside">
+                <object>
+                    <img class="profile-img" src={profile} />
+                    <h3>전지환</h3>
+                    <div>
+                        {/* github */}
+                        <a href="https://github.com/jjjh0508" target="_blank">
+                            <img src={github} />
+                        </a>
+
+                    </div>
+                    <Navber scrollRef={scrollRef} />
+                </object>
+            </aside>
         </>
     )
 }

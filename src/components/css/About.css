@@ -1,11 +1,9 @@
 .about-section {
-    padding-left: 30vw;
-    width: calc(100% - 36vw);
-    height: calc(100vh - 10vw);
-    z-index: 0;
-    overflow: hidden;
-    align-items: center;
     display: block;
+    font-family: GowunDodum;
+    height: calc(100vh - 15vw);
+    overflow: hidden;
+    width: calc(100% - 36vw);
 
 }
 

@@ -68,7 +68,7 @@ const Toegeungil = () => {
                                     <a href="http://toegeungil.shop/hobby" target="_blank" className="left-flex">
                                         <p>취미(Hobby)</p>
                                         <div className="project-veiw">
-                                            <a href="http://toegeungil.shop/social" target="_blank">Click</a>
+                                            <a href="http://toegeungil.shop/hobby" target="_blank">Click</a>
                                         </div>
                                     </a>
                                 </li>

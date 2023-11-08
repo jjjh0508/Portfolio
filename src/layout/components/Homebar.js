@@ -1,6 +1,6 @@
 import home from "../images/home.png"
 import "../css/Navbar.css"
-function Homebar({ projectset, setProjectSet }) {
+function Homebar({ setProjectSet }) {
 
     const onClick = () => {
         setProjectSet(0);
@@ -16,12 +16,12 @@ function Homebar({ projectset, setProjectSet }) {
     return (
         <>
             <nav>
-                {projectset !== 0 && (<div className="nav-bottom" onClick={onClick}>
+                {/* {projectset !== 0 && (<div className="nav-bottom" onClick={onClick}>
                     <img src={home} />
-                </div>)}
+                </div>)} */}
 
-                {projectset === 0 && (<div className="arrowbtn" onClick={scrollToTop}>
-                    <a>⇡</a>
+                {(<div className="arrowbtn" onClick={scrollToTop}>
+                    <a className="abtn">⇡</a>
                 </div>)}
             </nav>
         </>

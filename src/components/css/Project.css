@@ -9,11 +9,10 @@
 }
 
 .project-section {
-    /* padding: 5vw; */
-    width: calc(100% - 36vw);
     height: calc(100vh - 10vw);
-    z-index: 0;
     overflow: hidden;
+    width: calc(100% - 36vw);
+
 }
 
 .project-board {

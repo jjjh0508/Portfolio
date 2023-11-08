@@ -1,5 +1,7 @@
 .skill-section {
+    /* padding: 4vw 0; */
     width: 100%;
+    /* height: calc(100vh - 10vw); */
     align-items: end;
     justify-content: space-between;
     transition: 0.3s;
@@ -9,16 +11,10 @@
     top: 50%;
     transform: translateY(-50%);
 
+
 }
 
-.project-section {
-    padding-left: 30vw;
-    padding-top: 10vw;
-    width: calc(100% - 36vw);
-    height: calc(100vh - 10vw);
-    z-index: 0;
-    overflow: hidden;
-}
+
 
 .skillTitle {
     font-size: 2.0vw;

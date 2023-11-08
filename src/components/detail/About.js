@@ -4,7 +4,7 @@ const About = forwardRef((props, ref) => {
 
     return (
         <>
-            <section ref={reviewRef => (ref.current[0] = reviewRef)} id="about" className="about about-section">
+            <section ref={reviewRef => (ref.current[0] = reviewRef)} id="about" className="about page about-section">
                 <div className="about-board">
                     <div class="about-intro">
                         <h2>About Me</h2>

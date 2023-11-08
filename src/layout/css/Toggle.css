@@ -1,0 +1,83 @@
+@media screen and (max-width: 1024px) {
+    body.header-visible #titleBar {
+        -moz-transform: translateX(-23em);
+        -webkit-transform: translateX(-23em);
+        -ms-transform: translateX(-23em);
+        transform: translateX(-23em);
+
+    }
+}
+
+.titleBar {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    #titleBar .title {
+        color: #000000;
+        display: block;
+        font-weight: 700;
+        height: 44px;
+        line-height: 44px;
+        width: 100%;
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 736px) {
+
+    #titleBar .toggle {
+        height: 4em;
+        width: 6em;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    #titleBar {
+        -moz-backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -moz-transition: -moz-transform 0.5s ease;
+        -webkit-transition: -webkit-transform 0.5s ease;
+        -ms-transition: -ms-transform 0.5s ease;
+        transition: transform 0.5s ease;
+        display: block;
+        height: 44px;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10001;
+        background: #4acaa8;
+        color: #fff;
+        min-width: 320px;
+    }
+}
+
+
+@media screen and (max-width: 736px) {
+
+    #titleBar .toggle:before {
+        font-size: 14px;
+        width: 44px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #titleBar .toggle:before {
+        background: #4acaa8;
+        color: #ffffff;
+        content: '\f0c9';
+        display: block;
+        font-size: 18px;
+        height: 44px;
+        line-height: 44px;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        width: 64px;
+        left: 0;
+    }
+}

@@ -5,13 +5,12 @@ const Skill = forwardRef((props, ref) => {
     return (
         <>
             <section ref={skillRef => (ref.current[1] = skillRef)} id="skill" className="skill page project-section">
-                <div className="skill skill-section">
+                <div className="skill-section">
                     <div>
                         <div className="skillTitle">SkillSet</div>
                         <ul className="skill-list">
                             <li className="skill-flex">
-                                <div>
-                                    <h4>JAVA</h4>
+                                <div><h4>JAVA</h4>
                                     <h5>Spring, JPA, JSP, Thymeleaf, Rest Api</h5>
                                 </div>
                                 <span className="hover-text">

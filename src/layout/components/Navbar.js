@@ -8,43 +8,42 @@ const DETAIL_NAV = [
     { idx: 2, name: 'Project' }
 ]
 
-const Navber = ({ scrollRef, projectset }) => {
+const Navber = ({ scrollRef }) => {
     const [navIndex, setNavIndex] = useState(0);
     const navRef = useRef([]);
 
     useEffect(() => {
-        if (projectset === 0) {
-            scrollRef.current[navIndex]?.scrollIntoView({ behavior: 'smooth' });
-            setNavIndex(null)
-        }
+
+        scrollRef.current[navIndex]?.scrollIntoView({ behavior: 'smooth' });
+        setNavIndex(null)
+
     }, [scrollRef, navIndex])
 
-    console.log(projectset === 0)
     useEffect(() => {
-        if (projectset === 0) {
-            const changeNavBtnStyle = () => {
 
-                scrollRef.current.forEach((ref, idx) => {
-                    if (ref.offsetTop - 180 < window.scrollY) {
-                        navRef.current.forEach(ref => {
-                            ref.className = ref.className.replace(' navActive', '');
-                        });
+        const changeNavBtnStyle = () => {
 
-                        navRef.current[idx].className += ' navActive'
-                    }
+            scrollRef.current.forEach((ref, idx) => {
+                if (ref.offsetTop - 180 < window.scrollY) {
+                    navRef.current.forEach(ref => {
+                        ref.className = ref.className.replace(' navActive', '');
+                    });
 
-                });
-            }
+                    navRef.current[idx].className += ' navActive'
+                }
 
-            window.addEventListener('scroll', changeNavBtnStyle);
-            return () => {
-                window.removeEventListener('scroll', changeNavBtnStyle);
-            }
-        };
-    }, [scrollRef, projectset])
+            });
+        }
+
+        window.addEventListener('scroll', changeNavBtnStyle);
+        return () => {
+            window.removeEventListener('scroll', changeNavBtnStyle);
+        }
+
+    }, [scrollRef])
     return (
         <nav id="nav">
-            {(projectset === 0) && DETAIL_NAV.map(({ idx, name }) => (
+            {DETAIL_NAV.map(({ idx, name }) => (
                 <a className="navUnActive" key={idx}
                     ref={ref => (navRef.current[idx] = ref)}
                     onClick={() => { setNavIndex(idx) }}>{name}</a>
