@@ -3,9 +3,9 @@ import "../css/Profile.css"
 import "../css/Layout.css"
 import github from "../images/github.png"
 import Navber from "./Navbar"
-import { useLocation } from "react-router-dom";
+import { useLocation, NavLink } from "react-router-dom";
 function Profile({ scrollRef, isToggle }) {
-    const sampleLocation = useLocation().pathname;
+    const NavLocation = useLocation().pathname;
     return (
         <>
             <aside className={isToggle ? "asideOn" : "aside"} id="aside">
@@ -19,8 +19,14 @@ function Profile({ scrollRef, isToggle }) {
                         </a>
 
                     </div>
-                    {sampleLocation === "/" && <Navber scrollRef={scrollRef} />}
+                    {NavLocation === "/" && <Navber scrollRef={scrollRef} />}
+                    {(NavLocation !== "/") &&
+                        (
 
+                            < NavLink to="/ " className="navUnActive" >
+                                Home
+                            </NavLink>
+                        )}
                 </object>
             </aside>
         </>

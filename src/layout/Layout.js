@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom"
 import Profile from "./components/Profile"
-import Navber from "./components/Navbar"
 import Homebar from "./components/Homebar"
 import "./css/Layout.css"
 import Toggle from "./components/toggle"

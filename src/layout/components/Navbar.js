@@ -11,18 +11,19 @@ const DETAIL_NAV = [
 const Navber = ({ scrollRef }) => {
     const [navIndex, setNavIndex] = useState(0);
     const navRef = useRef([]);
-    const sampleLocation = useLocation().pathname;
+    const NavLocation = useLocation().pathname;
 
     useEffect(() => {
-        if (sampleLocation === "/") {
+        if (NavLocation === "/") {
             scrollRef.current[navIndex]?.scrollIntoView({ behavior: 'smooth' });
             setNavIndex(null)
         }
 
-    }, [scrollRef, navIndex, sampleLocation])
+    }, [scrollRef, navIndex, NavLocation])
+
 
     useEffect(() => {
-        if (sampleLocation === "/") {
+        if (NavLocation === "/") {
             const changeNavBtnStyle = () => {
                 scrollRef.current.forEach((ref, idx) => {
                     if (ref.offsetTop - 180 < window.scrollY) {
@@ -43,14 +44,18 @@ const Navber = ({ scrollRef }) => {
         }
 
 
-    }, [scrollRef, sampleLocation])
+    }, [scrollRef, NavLocation])
     return (
         <nav id="nav">
-            {DETAIL_NAV.map(({ idx, name }) => (
+            {(NavLocation === "/") && DETAIL_NAV.map(({ idx, name }) => (
                 <a className="navUnActive" key={idx}
                     ref={ref => (navRef.current[idx] = ref)}
                     onClick={() => { setNavIndex(idx) }}>{name}</a>
             ))}
+
+
+
+
         </nav>
     );
 };

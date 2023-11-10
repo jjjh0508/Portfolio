@@ -194,3 +194,51 @@ a {
 .pro-config img {
     width: 100%;
 }
+
+
+.footer_ul {
+    display: flex;
+    width: 90%;
+    margin: 5vw auto;
+    margin-bottom: 4vw;
+    text-align: center;
+    gap: 2vw;
+    font-family: 'Ghanachocolate';
+    color: #7B8676;
+}
+
+.footer_ul li {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2vw;
+    border: 3px solid #A1A594;
+    width: 22.5vw;
+    padding: 0.8vw 0;
+    font-weight: 500;
+    border-radius: 50px;
+    transition: 0.3s;
+    background-color: #4acaa8;
+
+}
+
+.footer_ul li a {
+    width: 70%;
+    color: black;
+}
+
+.footer_ul li svg {
+    fill: #A1A594;
+    width: 30px;
+    height: 30px;
+}
+
+.footer_ul li:nth-child(2) {
+    border-color: #C0AC93;
+    color: #C0AC93;
+}
+
+.footer_ul li:hover {
+    transform: translateY(-10px);
+}

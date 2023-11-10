@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import Layout from './layout/Layout';
 import DetailPage from './pages/DetailPage';
 import Toegeungil from './components/project/Toegeungil'
+import Algore from './components/project/Algore';
 function App() {
   const scrollRef = useRef([]);
 
@@ -14,6 +15,7 @@ function App() {
         <Route path='/' element={<Layout scrollRef={scrollRef} />}>
           <Route index element={<DetailPage scrollRef={scrollRef} />} />
           <Route path='/toegeungil' element={<Toegeungil />} />
+          <Route path='/Algore' element={<Algore />} />
         </Route>
       </Routes>
     </BrowserRouter>
