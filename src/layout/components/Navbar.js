@@ -28,10 +28,10 @@ const Navber = ({ scrollRef }) => {
                 scrollRef.current.forEach((ref, idx) => {
                     if (ref.offsetTop - 180 < window.scrollY) {
                         navRef.current.forEach(ref => {
-                            ref.className = ref.className.replace(' navActive', '');
+                            ref.className = ref.className = ('navUnActive');
                         });
 
-                        navRef.current[idx].className += ' navActive'
+                        navRef.current[idx].className = 'navActive'
                     }
 
                 });

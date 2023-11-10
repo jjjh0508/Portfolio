@@ -124,7 +124,8 @@
     font-size: 3.1vw;
     font-weight: bold;
     line-height: 4vw;
-    color: #A1A594;
+    color: #4acaa8;
+    ;
 }
 
 .overview_text {
@@ -213,7 +214,7 @@ a {
     align-items: center;
     justify-content: center;
     font-size: 1.2vw;
-    border: 3px solid #A1A594;
+    border: 3px solid #4acaa8;
     width: 22.5vw;
     padding: 0.8vw 0;
     font-weight: 500;
@@ -226,6 +227,7 @@ a {
 .footer_ul li a {
     width: 70%;
     color: black;
+
 }
 
 .footer_ul li svg {
@@ -235,7 +237,7 @@ a {
 }
 
 .footer_ul li:nth-child(2) {
-    border-color: #C0AC93;
+    background-color: #4acaa8;
     color: #C0AC93;
 }
 

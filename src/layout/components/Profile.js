@@ -12,13 +12,7 @@ function Profile({ scrollRef, isToggle }) {
                 <object>
                     <img class="profile-img" src={profile} />
                     <h3>전지환</h3>
-                    <div>
-                        {/* github */}
-                        <a href="https://github.com/jjjh0508" target="_blank">
-                            <img src={github} />
-                        </a>
 
-                    </div>
                     {NavLocation === "/" && <Navber scrollRef={scrollRef} />}
                     {(NavLocation !== "/") &&
                         (
@@ -27,6 +21,14 @@ function Profile({ scrollRef, isToggle }) {
                                 Home
                             </NavLink>
                         )}
+
+                    <div>
+                        {/* github */}
+                        <a href="https://github.com/jjjh0508" target="_blank">
+                            <img className="github" src={github} />
+                        </a>
+
+                    </div>
                 </object>
             </aside>
         </>

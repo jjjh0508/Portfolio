@@ -99,4 +99,5 @@
 
 .project-view:hover {
     background-color: #7de1c6;
+    cursor: pointer
 }
