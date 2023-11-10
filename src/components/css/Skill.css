@@ -45,13 +45,13 @@
 }
 
 .skill-section .skill-list li:hover {
-    background-color: #A1A594;
-    color: #fff;
+    background-color: #E9F6F1;
+    color: #000000;
     transition: 0.3s;
 }
 
 .skill-section .skill-list .hover-text {
-    color: #fff;
+    color: #000000;
     font-size: 1.5vw;
     margin-right: 2vw;
     opacity: 0;
