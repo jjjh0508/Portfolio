@@ -7,7 +7,7 @@ const About = forwardRef((props, ref) => {
             <section ref={reviewRef => (ref.current[0] = reviewRef)} id="about" className="about page about-section">
                 <div className="about-board">
                     <div class="about-intro">
-                        <h2>About Me</h2>
+                        <div className="about-pageTitle">About Me</div>
                         <h1>안녕하세요. <br />
                             끈기 있고 꾸준히 발전하는 신입 개발자  <br />
                             전지환입니다.</h1>

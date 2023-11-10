@@ -1,4 +1,5 @@
 import "../css/Toggle.css"
+import { NavLink } from "react-router-dom";
 function Toggle({ onClickToggle }) {
 
 
@@ -7,7 +8,9 @@ function Toggle({ onClickToggle }) {
             <div id="titleBar">
                 <a className="toggle" onClick={onClickToggle}></a>
                 <span className="title">
-                    <div>jeon ji hwan</div>
+                    <NavLink to="/">
+                        <div>jeon ji hwan</div>
+                    </NavLink>
                 </span>
             </div>
         </>
