@@ -5,12 +5,16 @@ import "./css/Layout.css"
 import Toggle from "./components/toggle"
 import { useEffect, useState } from "react"
 
-function Layout({ scrollRef, setProjectSet }) {
-    const [isToggle, setIsToggle] = useState(false);
+
+function Layout({ scrollRef, setProjectSet, isToggle, setIsToggle, outsideToggle }) {
+
     const [width, setWidth] = useState(window.innerWidth);
+
+
     const onClickToggle = () => {
         isToggle ? setIsToggle(false) : setIsToggle(true)
     }
+
     const handleResize = () => {
         setWidth(window.innerWidth);
     };
@@ -26,8 +30,8 @@ function Layout({ scrollRef, setProjectSet }) {
     }, [width])
     return (
         <>
-            <div className="container">
-                <Toggle onClickToggle={onClickToggle} />
+            <Toggle onClickToggle={onClickToggle} />
+            <div className="container" onClick={outsideToggle}>
                 <Profile scrollRef={scrollRef} isToggle={isToggle} />
                 <Homebar setProjectSet={setProjectSet} />
                 <Outlet />

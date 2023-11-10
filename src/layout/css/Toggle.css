@@ -21,6 +21,7 @@
         line-height: 44px;
         width: 100%;
         text-align: right;
+
     }
 }
 
@@ -29,6 +30,10 @@
     #titleBar .toggle {
         height: 4em;
         width: 6em;
+    }
+
+    .myname {
+        margin-right: 1.5vh;
     }
 }
 
@@ -79,5 +84,9 @@
         top: 0;
         width: 64px;
         left: 0;
+    }
+
+    .myname {
+        margin-right: 1.7vh;
     }
 }

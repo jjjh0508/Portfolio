@@ -22,15 +22,15 @@ import toegeungilGit from "../images/toegeungilGit.png"
 import "../css/project/project.css"
 
 import { useEffect } from "react";
-const Toegeungil = () => {
+const Toegeungil = ({ outsideToggle }) => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
     return (
         <>
-            <div className="algore-section projectnout page">
-                <div className="project-header">
+            <div className="algore-section projectnout page"  >
+                <div className="project-header" onClick={outsideToggle}>
                     <div className="header_wrap">
                         <img src={toegeungilTitle} alt="퇴근길" />
                         <div className="headertext">

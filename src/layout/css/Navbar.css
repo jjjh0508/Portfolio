@@ -14,8 +14,6 @@ nav ul {
 
 
 .navActive {
-    font-size: 1.625rem;
-    font-style: italic;
     font-size: 4vh;
     font-weight: bold;
 }
@@ -77,4 +75,27 @@ nav img:hover {
     text-align: center;
     transition: .3s;
     width: 5vw;
+}
+
+
+@media screen and (max-width: 736px) {
+
+    .navActive {
+        font-size: 2vh;
+        font-weight: bold;
+    }
+
+    .navUnActive {
+        color: white;
+        font-size: 2vh;
+    }
+
+    .navUnActive:hover {
+        color: rgb(255, 255, 255);
+        font-size: 2vh;
+        font-weight: bold;
+
+
+    }
+
 }

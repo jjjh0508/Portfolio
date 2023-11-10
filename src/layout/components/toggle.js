@@ -9,7 +9,7 @@ function Toggle({ onClickToggle }) {
                 <a className="toggle" onClick={onClickToggle}></a>
                 <span className="title">
                     <NavLink to="/">
-                        <div>jeon ji hwan</div>
+                        <div className="myname">jeon ji hwan</div>
                     </NavLink>
                 </span>
             </div>
