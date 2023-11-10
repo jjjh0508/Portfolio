@@ -1,7 +1,6 @@
 import "../css/About.css"
 import { forwardRef } from "react";
 const About = forwardRef((props, ref) => {
-
     return (
         <>
             <section ref={reviewRef => (ref.current[0] = reviewRef)} id="about" className="about page about-section">

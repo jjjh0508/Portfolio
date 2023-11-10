@@ -8,9 +8,11 @@ import Algore from './components/project/Algore';
 function App() {
   const scrollRef = useRef([]);
   const [isToggle, setIsToggle] = useState(false);
+
   const outsideToggle = () => {
     setIsToggle(false)
   }
+
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
@@ -18,7 +20,6 @@ function App() {
           <Route index element={<DetailPage scrollRef={scrollRef} />} />
           <Route path='/toegeungil' element={<Toegeungil />} />
           <Route path='/Algore' element={<Algore />} />
-
         </Route>
       </Routes>
     </BrowserRouter>

@@ -2,6 +2,7 @@
 import "../css/Navbar.css"
 import { useState, useRef, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+
 const DETAIL_NAV = [
     { idx: 0, name: 'About' },
     { idx: 1, name: 'SkillSet' },
@@ -13,14 +14,34 @@ const Navber = ({ scrollRef }) => {
     const navRef = useRef([]);
     const NavLocation = useLocation().pathname;
 
+
     useEffect(() => {
         if (NavLocation === "/") {
             scrollRef.current[navIndex]?.scrollIntoView({ behavior: 'smooth' });
-            setNavIndex(null)
+            // setNavIndex(null)
         }
+    }, [navIndex, NavLocation])
 
+    useEffect(() => {
+        if (NavLocation === "/") {
+            window.addEventListener('wheel', (e) => {
+                e.preventDefault();
+                if (e.deltaY > 0) {
+                    let num = navIndex + 1;
+                    setNavIndex(num);
+                } else if (e.deltaY < 0) {
+                    let num = navIndex - 1;
+                    setNavIndex(num);
+                }
+                if (navIndex < 0) {
+                    setNavIndex(0);
+                } else if (navIndex > 2) {
+                    setNavIndex(2);
+                }
+
+            }, { passive: false });
+        }
     }, [scrollRef, navIndex, NavLocation])
-
 
     useEffect(() => {
         if (NavLocation === "/") {
@@ -36,13 +57,11 @@ const Navber = ({ scrollRef }) => {
 
                 });
             }
-
             window.addEventListener('scroll', changeNavBtnStyle);
             return () => {
                 window.removeEventListener('scroll', changeNavBtnStyle);
             }
         }
-
 
     }, [scrollRef, NavLocation])
     return (
