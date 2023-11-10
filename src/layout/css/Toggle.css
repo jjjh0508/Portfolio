@@ -38,7 +38,7 @@
 }
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 800px) {
     #titleBar {
         -moz-backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
@@ -70,7 +70,7 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 800px) {
     #titleBar .toggle:before {
         background: #4acaa8;
         color: #ffffff;
