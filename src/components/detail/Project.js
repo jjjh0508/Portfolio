@@ -57,7 +57,7 @@ const Project = forwardRef((props, ref) => {
                                 <div>공공데이터</div>
                                 <div>Thymeleaf</div>
                             </div>
-                            <NavLink to='/toegeungil'>
+                            <NavLink to='/Algore'>
                                 <div className="project-view">
                                     View More
                                 </div>
