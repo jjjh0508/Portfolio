@@ -241,7 +241,7 @@ const Algore = () => {
 
                 <footer>
                     <ul class="footer_ul">
-                        <li><a href="https://github.com/Teddybear-6" target="_blank">View github</a></li>
+                        <li><a href="https://github.com/jjjh0508/project_algore-refactoring" target="_blank">View github</a></li>
                         <li>
                             <NavLink to="/toegeungil">
                                 Next project
