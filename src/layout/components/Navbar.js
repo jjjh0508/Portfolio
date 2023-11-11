@@ -14,35 +14,45 @@ const Navber = ({ scrollRef }) => {
     const navRef = useRef([]);
     const NavLocation = useLocation().pathname;
 
-
     useEffect(() => {
         if (NavLocation === "/") {
             scrollRef.current[navIndex]?.scrollIntoView({ behavior: 'smooth' });
             // setNavIndex(null)
         }
     }, [navIndex, NavLocation])
+    const wheelHandler = (e) => {
+        console.log(e.deltaY)
+        e.preventDefault();
+        console.log(navIndex)
+        if (e.deltaY > 0) {
+            let num = navIndex + 1;
+            setNavIndex(num);
+        } else if (e.deltaY < 0) {
+            let num = navIndex - 1;
+            setNavIndex(num);
+        }
+        if (navIndex < 0) {
+            setNavIndex(0);
+        } else if (navIndex > 2) {
+            setNavIndex(2);
+        }
+
+    }
 
     useEffect(() => {
         if (NavLocation === "/") {
-            window.addEventListener('wheel', (e) => {
-                e.preventDefault();
-                if (e.deltaY > 0) {
-                    let num = navIndex + 1;
-                    setNavIndex(num);
-                } else if (e.deltaY < 0) {
-                    let num = navIndex - 1;
-                    setNavIndex(num);
-                }
-                if (navIndex < 0) {
-                    setNavIndex(0);
-                } else if (navIndex > 2) {
-                    setNavIndex(2);
-                }
 
-            }, { passive: false });
+            window.addEventListener('wheel', wheelHandler, { passive: false });
+
+            return () => {
+                window.removeEventListener('wheel', wheelHandler, { passive: false });
+            }
+        } else {
+            return () => {
+                window.removeEventListener('wheel', wheelHandler, { passive: false });
+            }
         }
     }, [scrollRef, navIndex, NavLocation])
-
     useEffect(() => {
         if (NavLocation === "/") {
             const changeNavBtnStyle = () => {

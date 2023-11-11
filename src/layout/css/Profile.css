@@ -84,8 +84,6 @@ aside div {
 aside div img {
     width: 8vw;
     cursor: pointer;
-    filter: invert(89%) sepia(23%) saturate(161%) hue-rotate(110deg) brightness(105%) contrast(86%);
-
 }
 
 aside div img:hover {
