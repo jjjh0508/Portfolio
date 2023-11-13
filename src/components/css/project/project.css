@@ -244,3 +244,255 @@ a {
 .footer_ul li:hover {
     transform: translateY(-10px);
 }
+
+
+@media screen and (max-width: 500px) {
+    .algore-section {
+        /* padding: 5vw; */
+        margin-top: 3vh;
+        width: 100%;
+        /* height: calc(100vh - 10vw); */
+        z-index: 0;
+        overflow: hidden;
+        color: #475347;
+        overflow-x: hidden;
+    }
+
+
+    .projectnout {
+        padding: 0 0 0 0;
+    }
+
+
+    .project-header {
+        width: 100%;
+        overflow: hidden;
+        top: 50%;
+        display: flex;
+        align-items: start;
+    }
+
+
+    .header_wrap img {
+        width: 100%;
+    }
+
+
+    .headerdiv {
+        height: 50vh;
+    }
+
+
+    .headertext h1 {
+        margin-top: 1.3vw;
+        font-size: 6vw;
+        font-weight: bold;
+        color: #475347;
+
+    }
+
+    .headertext h2 {
+        margin-top: 1.5vw;
+        font-size: 4vw;
+        font-weight: 600;
+        color: #7B8676;
+
+
+    }
+
+
+
+    .headertext-ul {
+        display: flex;
+        justify-content: start;
+        gap: 20px;
+        font-size: 1.1vw;
+        margin-top: 1.7vw;
+    }
+
+    .headertxt-ul li {
+        position: relative;
+        font-weight: 500;
+        color: #7B8676;
+
+    }
+
+    .overview hr {
+        margin-top: 8vw;
+        margin-bottom: 8vw;
+        border: 3px solid #A1A59430;
+    }
+
+
+    .headertext .viewbtn a {
+        font-weight: 500;
+        font-size: 3.6vw;
+        border: 2px solid #C0AC93;
+        color: #C0AC93;
+        font-weight: bold;
+        width: 30vw;
+        height: 5vh;
+        display: block;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        line-height: 9vw;
+        border-radius: 50px;
+        margin-top: 2.3vw;
+        margin-right: 1.5vw;
+        box-shadow: 0.3vw 0.3vw #7de1c6;
+        text-decoration: none;
+    }
+
+
+    .headertext .viewbtn a:hover {
+        background-color: #4acaa8;
+        color: white;
+        box-shadow: 0.3vw 0.3vw #7de1c6;
+    }
+
+    .right-flex {
+        display: flex;
+        justify-content: start;
+    }
+
+
+    .overview hr {
+        margin-top: 8vw;
+        margin-bottom: 8vw;
+        border: 3px solid #A1A59430;
+    }
+
+    .common_wrap {
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .common_wrap h1 {
+        margin-left: 2.5vw;
+        font-size: 4vw;
+        font-weight: bold;
+        line-height: 4vw;
+        color: #4acaa8;
+        ;
+    }
+
+    .overview_text {
+        width: 100%;
+    }
+
+    a {
+        color: #475347;
+        text-decoration: none;
+    }
+
+    .overview_text .overview_text_ul li {
+        font-size: 4vw;
+        font-weight: 600;
+        margin-bottom: 2vw;
+    }
+
+    .overview_text .overview_text_ul li p {
+        font-weight: 400;
+        font-size: 4vw;
+        line-height: 1.5;
+        padding: 1vw 0 0 1.3vw;
+        color: #475347;
+    }
+
+    .project-border {
+        font-size: 5vw;
+        margin-top: 1vw;
+        margin-left: 6vw;
+        width: 5vw;
+        height: 2.5vw;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+    }
+
+    .project-veiw {
+        font-size: 1vw;
+        margin-top: 2vw;
+        margin-left: 0.2vw;
+        width: 1.6vw;
+        height: 1.6vw;
+
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .project-veiw a {
+        font-size: 0.8vw;
+    }
+
+    .left-flex {
+        display: flex;
+        justify-content: start;
+    }
+
+
+    .skill-images img {
+        width: 20vw;
+    }
+
+
+    .pro-config img {
+        width: 100%;
+    }
+
+
+    .footer_ul {
+        display: flex;
+        width: 90%;
+        margin: 5vw auto;
+        margin-bottom: 4vw;
+        text-align: center;
+        gap: 2vw;
+        font-family: 'Ghanachocolate';
+        color: #7B8676;
+    }
+
+    .footer_ul li {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2vw;
+        border: 3px solid #4acaa8;
+        width: 22.5vw;
+        padding: 0.8vw 0;
+        font-weight: 500;
+        border-radius: 50px;
+        transition: 0.3s;
+        background-color: #4acaa8;
+
+    }
+
+    .footer_ul li a {
+        width: 70%;
+        color: black;
+
+    }
+
+    .footer_ul li svg {
+        fill: #A1A594;
+        width: 30px;
+        height: 30px;
+    }
+
+    .footer_ul li:nth-child(2) {
+        background-color: #4acaa8;
+        color: #C0AC93;
+    }
+
+    .footer_ul li:hover {
+        transform: translateY(-10px);
+    }
+}

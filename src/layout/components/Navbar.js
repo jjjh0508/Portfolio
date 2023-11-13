@@ -21,9 +21,7 @@ const Navber = ({ scrollRef }) => {
         }
     }, [navIndex, NavLocation])
     const wheelHandler = (e) => {
-        console.log(e.deltaY)
         e.preventDefault();
-        console.log(navIndex)
         if (e.deltaY > 0) {
             let num = navIndex + 1;
             setNavIndex(num);

@@ -9,7 +9,7 @@
 }
 
 .project-section {
-    height: calc(100vh - 10vw);
+    height: calc(100vh - 10vh);
     overflow: hidden;
     width: calc(100% - 36vw);
 
@@ -100,4 +100,160 @@
 .project-view:hover {
     background-color: #7de1c6;
     cursor: pointer
+}
+
+@media screen and (max-width: 500px) {
+    .project-section {
+        height: calc(100vh - 9vh);
+        overflow: hidden;
+        width: calc(100% - 0vw);
+
+
+    }
+
+    .project-img {
+        display: none;
+    }
+
+    .project-no {
+
+        width: 100%;
+    }
+
+    /* 01, 02, 03 */
+    .project-sec1 {
+        font-family: 'Ghanachocolate';
+        font-size: 6vw;
+        color: #475347;
+    }
+
+    /* 프로젝트명 */
+    .project-sec2 {
+        margin-top: 1vw;
+        font-family: 'Ghanachocolate';
+        font-size: 6vw;
+        color: #475347;
+    }
+
+    /* 프로젝트 간단 소개 */
+    .project-sec3 {
+        margin-left: 1vw;
+        margin-top: 1.5vw;
+        line-height: 6vw;
+        color: #7B8676;
+        font-weight: 700;
+        font-size: 4vw;
+    }
+
+    /* 프로젝트 해시태그 */
+    .project-sec4 {
+        margin-left: 1vw;
+        margin-top: 1vw;
+        font-size: 10vw;
+        color: #C0AC93;
+        font-weight: bold;
+    }
+
+    .project-view {
+        margin-top: 2vw;
+        font-size: 5vw;
+        font-weight: bold;
+        width: 30vw;
+        height: 10vw;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        background-color: #4acaa8;
+        color: white;
+        border-radius: 50px;
+        margin-left: 0.5vw;
+        box-shadow: 0.3vw 0.3vw #7de1c6;
+    }
+
+    .skillTitle {
+        font-size: 50px;
+        color: #4acaa8;
+
+
+    }
+}
+
+
+
+/* 갤럭시8+ */
+@media screen and (max-width: 360px) {
+    .project-section {
+        height: calc(100vh - 9vh);
+        overflow: hidden;
+        width: calc(100% - 0vw);
+
+    }
+
+    .project-img {
+        display: none;
+    }
+
+    .project-no {
+
+        width: 100%;
+    }
+
+    /* 01, 02, 03 */
+    .project-sec1 {
+        font-family: 'Ghanachocolate';
+        font-size: 6vw;
+        color: #475347;
+    }
+
+    /* 프로젝트명 */
+    .project-sec2 {
+        margin-top: 1vw;
+        font-family: 'Ghanachocolate';
+        font-size: 6vw;
+        color: #475347;
+    }
+
+    /* 프로젝트 간단 소개 */
+    .project-sec3 {
+        margin-left: 1vw;
+        margin-top: 1.5vw;
+        line-height: 6vw;
+        color: #7B8676;
+        font-weight: 700;
+        font-size: 4vw;
+    }
+
+    /* 프로젝트 해시태그 */
+    .project-sec4 {
+        margin-left: 1vw;
+        margin-top: 1vw;
+        font-size: 10vw;
+        color: #C0AC93;
+        font-weight: bold;
+    }
+
+    .project-view {
+        margin-top: 3vw;
+        font-size: 5vw;
+        font-weight: bold;
+        width: 30vw;
+        height: 10vw;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        background-color: #4acaa8;
+        color: white;
+        border-radius: 50px;
+        margin-left: 0.5vw;
+        box-shadow: 0.3vw 0.3vw #7de1c6;
+    }
+
+    .skillTitle {
+        font-size: 50px;
+        color: #4acaa8;
+
+
+    }
 }

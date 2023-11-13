@@ -13,7 +13,6 @@ import algore from "../images/algore.png"
 import "../css/Project.css"
 const Project = forwardRef((props, ref) => {
 
-
     return (
 
         <section ref={projectRef => { ref.current[2] = projectRef }} id="project" className="page project-section">
@@ -27,7 +26,17 @@ const Project = forwardRef((props, ref) => {
                     keyboard={true}
                     loop={true}
                     modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+                    breakpoints={{
+
+                        800: {
+                            slidesPerView: 1,
+                            spaceBetween: 40
+                        },
+
+
+                    }}
                     className="mySwiper">
+
                     <SwiperSlide>
                         <div className="project-no">
                             <div className="project-sec1">1.</div>
@@ -69,7 +78,7 @@ const Project = forwardRef((props, ref) => {
                     </SwiperSlide>
                 </Swiper>
             </div>
-        </section>
+        </section >
     )
 })
 

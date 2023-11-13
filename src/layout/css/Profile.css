@@ -133,11 +133,13 @@ aside div img:hover {
         text-align: center;
         left: 0;
         top: 0;
+        z-index: 2;
     }
 
     .profile-img {
         width: 12vw;
-        margin-top: 9vw;
+        margin-left: 1vh;
+        margin-top: 7.5vh;
         border-radius: 100%;
         display: block;
 

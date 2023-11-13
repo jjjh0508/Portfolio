@@ -1,7 +1,7 @@
 .about-section {
     display: block;
     font-family: GowunDodum;
-    height: calc(100vh - 15vw);
+    height: calc(100vh - 15vh);
     overflow: hidden;
     width: calc(100% - 36vw);
 
@@ -76,7 +76,87 @@
 
 .about-pageTitle {
     color: #4acaa8;
-    font-size: 6vw;
+    font-size: 50px;
     margin-top: 1.5vw;
     text-align: left;
+}
+
+@media screen and (max-width: 800px) {
+
+    .about-section {
+
+        display: block;
+        height: calc(100vh - 3vh);
+        overflow: hidden;
+        width: calc(100% - 0vw);
+
+    }
+
+    .about-intro h1 {
+        color: #475347;
+        font-size: 3vw;
+        font-weight: 600;
+        line-height: 5vw;
+        margin-top: 1.7vw;
+    }
+
+
+    .about-intro h4 {
+        font-size: 1.6vh;
+        display: flex;
+    }
+
+    .keyword h4 {
+        display: flex;
+        justify-content: center;
+        border-radius: 3em;
+        border: 0.5vh solid #4acaa8;
+        height: 6vh;
+        text-align: center;
+        align-items: center;
+        width: 26vw;
+        color: #A1A594;
+
+    }
+}
+
+
+
+@media screen and (max-width: 412px) {
+
+    .about-section {
+
+        display: block;
+        height: calc(100vh - 5vh);
+        overflow: hidden;
+        width: calc(100% - 0vw);
+
+    }
+
+    .about-intro h1 {
+        color: #475347;
+        font-size: 3vw;
+        font-weight: 600;
+        line-height: 5vw;
+        margin-top: 1.7vw;
+    }
+
+
+    .about-intro h4 {
+        font-size: 1.6vh;
+        display: flex;
+    }
+
+    .keyword h4 {
+        display: flex;
+        justify-content: center;
+        border-radius: 3em;
+        border: 0.5vh solid #4acaa8;
+        height: 6vh;
+        text-align: center;
+        align-items: center;
+        width: 26vw;
+        color: #A1A594;
+
+    }
 }

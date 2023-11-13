@@ -4,7 +4,7 @@ const Skill = forwardRef((props, ref) => {
 
     return (
         <>
-            <section ref={skillRef => (ref.current[1] = skillRef)} id="skill" className="skill page project-section">
+            <section ref={skillRef => (ref.current[1] = skillRef)} id="skill" className="skill page project-section-skill">
                 <div className="skill-section">
                     <div>
                         <div className="skillTitle">SkillSet</div>
@@ -41,7 +41,9 @@ const Skill = forwardRef((props, ref) => {
                                 </span>
                             </li>
                             <li className="skill-flex">
-                                <h4>GitHub, Figma, miro</h4>
+                                <div>
+                                    <h4>GitHub, Figma, miro</h4>
+                                </div>
                                 <span class="hover-text">
                                     <p>GitHub Organizations를 통한 협업 및 Git Flow 전략 사용</p>
                                     <p>Figma를 이용한 레이아웃 UI 설계 및 웹 디자인</p>
