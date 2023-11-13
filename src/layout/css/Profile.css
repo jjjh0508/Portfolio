@@ -54,7 +54,8 @@
 
 .profile-img {
     width: 12vw;
-    margin-top: 4vw;
+    margin-left: 2vh;
+    margin-top: 5vw;
     border-radius: 100%;
     display: block;
 
@@ -95,7 +96,7 @@ aside div img:hover {
 
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
     .aside {
         -moz-backface-visibility: hidden;
         -webkit-backface-visibility: hidden;

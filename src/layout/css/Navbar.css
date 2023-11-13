@@ -81,7 +81,7 @@ nav img:hover {
 }
 
 
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 500px) {
 
     .navActive {
         font-size: 2vh;

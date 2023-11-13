@@ -1,4 +1,4 @@
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 500px) {
     body.header-visible #titleBar {
         -moz-transform: translateX(-23em);
         -webkit-transform: translateX(-23em);
@@ -12,7 +12,7 @@
     display: none;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 500px) {
     #titleBar .title {
         color: #000000;
         display: block;
@@ -25,7 +25,7 @@
     }
 }
 
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 500px) {
 
     #titleBar .toggle {
         height: 4em;
@@ -38,7 +38,7 @@
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
     #titleBar {
         -moz-backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
@@ -62,7 +62,7 @@
 }
 
 
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 500px) {
 
     #titleBar .toggle:before {
         font-size: 14px;
@@ -70,7 +70,7 @@
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
     #titleBar .toggle:before {
         background: #4acaa8;
         color: #ffffff;
