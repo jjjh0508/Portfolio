@@ -464,9 +464,9 @@ a {
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.2vw;
+        font-size: 3vw;
         border: 3px solid #4acaa8;
-        width: 22.5vw;
+        width: 30vw;
         padding: 0.8vw 0;
         font-weight: 500;
         border-radius: 50px;
