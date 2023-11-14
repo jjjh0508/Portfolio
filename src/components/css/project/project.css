@@ -336,9 +336,9 @@ a {
         text-align: center;
         align-items: center;
         align-content: center;
-        line-height: 9vw;
+        line-height: 9.9vw;
         border-radius: 50px;
-        margin-top: 2.3vw;
+        margin-top: 2.4vw;
         margin-right: 1.5vw;
         box-shadow: 0.3vw 0.3vw #7de1c6;
         text-decoration: none;
@@ -455,7 +455,6 @@ a {
         margin-bottom: 4vw;
         text-align: center;
         gap: 2vw;
-        font-family: 'Ghanachocolate';
         color: #7B8676;
     }
 
